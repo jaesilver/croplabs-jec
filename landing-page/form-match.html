@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - Match</title>
+    <style>
+        @import "https://fonts.googleapis.com/css?family=Lato:400,600,700&subset=latin-ext";
+
+body {
+  background: #B1D8B7;
+  font-family: 'Lato';
+  padding: 10px 0;
+  margin: 80px;
+  font-size: 20px;
+  overflow-x: hidden;
+  min-width: 345px;
+}
+
+* {
+  box-sizing: border-box;
+}
+*:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* write your code below this line */
+form {
+	max-width: 1000px;
+	display: block;
+	width: 90%;
+	background-color: #1c1c1c;
+	padding: 25px 0;
+	margin: 40px auto;
+	color: #fff;
+	box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+fieldset {
+	border: none;
+	width: 90%;
+	margin: 10px auto;
+}
+legend {
+	margin: 30px 0 0;
+	font-size: 24px;
+	font-weight: 700;
+}
+.double-input {
+	margin: 20px auto;
+}
+.double-input > div {
+	float: left;
+	width: 48%;
+	margin: 0 1% 10px;
+} 
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+}
+button {
+	height: 50px;
+	width: 300px;
+	background-color: #B1D8B7;
+	color: black;
+    font-weight: bold;
+	border: none;
+	cursor: pointer;
+	font-size:20px;
+	line-height: 50px;
+	font-family: 'Lato';
+	box-shadow: 0 0 10px #131313;
+	display: block;
+	margin: 0 auto;
+}
+input, select {
+	width: 100%;
+	color: #fff;
+	background-color: transparent;
+	border: 1px solid #a9a9a9;
+	padding: 8px;
+	height: 35px;
+}
+.date-select > select {
+	width: 47%;
+}
+.date-select > select:first-of-type {
+	margin-right: 3%;
+}
+input:focus, 
+select:focus {
+	border: 1px solid #B1D8B7;
+}
+input:valid, 
+select:valid {
+	border: 1px solid #B1D8B7;
+}
+option {
+	color: #000;
+	background-color: #ececec;
+}
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Personal data</legend>
+            <div class="double-input">
+                <div class="form-input-container">
+                    <label for="fname">Name</label>
+                    <input type="text" id="fname" placeholder="Alna Benny" minlength="3" required>
+                </div>
+                <div class="form-input-container">
+                    <label for="lname">Your Affiliation to the company</label>
+                    <input type="text" id="lname" placeholder="Chief Executive Officer" required>
+                </div>
+            </div>
+            <div class="double-input">
+                <div class="form-input-container">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="alnabenny@hotmail.com" required>
+                </div>
+                <div class="form-input-container">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="9061735329" required>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Match details</legend>
+            <div class="double-input">
+                <div class="form-input-container">
+                    <label for="lname">Name of the Raw Material</label>
+                    <input type="text" id="lname" placeholder="xxxxx" required>
+                </div>
+                <div class="form-input-container">
+                    <label for="capacity">How Much (Capacity in KG)</label>
+                    <input type="number" id="capacity" value="1" min="1" max="10" step="1">
+                </div>
+            </div>
+            <div class="double-input">
+                <div class="form-input-container date-select">
+                    <label for="">Delivery By</label>
+                    <select name="start-date-day">
+                        <option disabled selected>Day</option>
+                        <option value="1">1</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                    <select name="start-date-month">
+                        <option disabled selected>Month</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="Spetember">September</option>
+                        <option value="October">October</option>
+                    </select>
+                </div>
+                <div class="form-input-container date-select">
+                    
+                        <label for="hotelcity">Your Location</label>
+                        <select id="hotelcity">
+                            <option value="Warsaw">Kannur</option>
+                            <option value="Cracow">Kasargod</option>
+                            <option value="Wroclaw">Thrissur</option>
+                            <option value="Poznan">Ernakulam</option>
+                        </select>
+                    
+                </div>
+            </div>
+        </fieldset>
+        <a href="submitted.html"><button type="button">Submit a request</button></a>
+    </form>
+    </body>
+</html>

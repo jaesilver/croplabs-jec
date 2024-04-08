@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croplabs | Signin</title>
+    <link rel="icon" href="/static/img/rna.png" type="image/icon type">
+    
+    <link rel="stylesheet" href="styles/signin.css">
+
+</head>
+<body>
+    
+
+    <label class="error_box">
+        <input type="checkbox" class="alertCheckbox" autocomplete="off" />
+        <!-- <div class="alert error">
+            <span class="alertClose">
+                
+                <box-icon name='x-circle' type='solid' color='#ce0000' animation='tada'></box-icon>
+            </span> 
+            <span class="alertText">
+                
+                <br class="clear" /></span>
+        </div> -->
+    </label>    
+
+        
+    <div id="container" class="container">
+        <!-- FORM SECTION -->
+        <div class="row">
+            <!-- SIGN UP -->
+            <div class="col align-items-center flex-col sign-up">
+                <div class="form-wrapper align-items-center">
+                    <form action="" method="post">
+                        <div class="form sign-up">
+                            <div class="input-group">
+                                <input type="email" name="email-in" placeholder="Email" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" name="pswd-in" placeholder="Password" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" name="confirmpswd-in" placeholder="Confirm password" required>
+                            </div>
+                            <!-- <div class="h-captcha" data-sitekey="{{ key }}"></div> -->
+                            <button type="submit">
+                                Sign Up
+                            </button>
+                            <p>
+                                <span>
+                                    Already have an account?
+                                </span>
+                                <b onclick="toggle()" class="pointer">
+                                    Sign in here
+                                </b>            
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            
+            </div>
+            <!-- END SIGN UP -->
+            <!-- SIGN IN -->
+            <div class="col align-items-center flex-col sign-in">
+                <div class="form-wrapper align-items-center">
+                    <form action="" method="post">
+                        <div class="form sign-in">
+                            <div class="input-group">
+                                <input type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="input-group">
+                                <input type="password" name="password" placeholder="Password">
+                            </div>
+                            <div class="input-group">
+                                <!-- <div class="h-captcha" data-sitekey="{{ key }}" ></div> -->
+                            </div>
+                            <button type="submit">
+                                Sign In
+                            </button>
+                            <p>
+                                <b>
+                                    Forgot password?
+                                </b>
+                            </p>
+                            <p>
+                                <span>
+                                    Don't have an account?
+                                </span>
+                                <b onclick="toggle()" class="pointer">
+                                    Sign up here
+                                </b>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-wrapper">
+        
+                </div>
+            </div>
+            <!-- END SIGN IN -->
+        </div>
+        <!-- END FORM SECTION -->
+        <!-- CONTENT SECTION -->
+        <div class="row content-row">
+            <!-- SIGN IN CONTENT -->
+            <div class="col align-items-center flex-col">
+                <div class="text sign-in">
+                    <h2>
+                        Welcome
+                    </h2>
+    
+                </div>
+                <div class="img sign-in">
+        
+                </div>
+            </div>
+            <!-- END SIGN IN CONTENT -->
+            <!-- SIGN UP CONTENT -->
+            <div class="col align-items-center flex-col">
+                <div class="img sign-up">
+                
+                </div>
+                <div class="text sign-up">
+                    <h2>
+                        Join with us
+                    </h2>
+    
+                </div>
+            </div>
+            <!-- END SIGN UP CONTENT -->
+        </div>
+        <!-- END CONTENT SECTION -->
+    </div>
+
+
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<!-- <script src="https://js.hcaptcha.com/1/api.js" async defer></script> -->
+<script>
+    let container = document.getElementById('container')
+
+    toggle = () => {
+        container.classList.toggle('sign-in')
+        container.classList.toggle('sign-up')
+    }
+
+    setTimeout(() => {
+        container.classList.add('sign-in')
+    }, 200)
+
+    function redirectToAnotherSite() {
+        window.location.href = '\dashboard.html';
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

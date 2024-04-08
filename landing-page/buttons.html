@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap");
+body,
+html {
+  /* height: 100%; */
+  /* min-height: 100%; */
+}
+body {
+  background-color: #B1D8B7;
+}
+.wrapper {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;
+  height: 100%;
+  margin-top: 400px;
+  margin-left: 40px;
+  overflow-x: hidden;
+}
+.btn,
+.btn:focus,
+.btn:active {
+  /* position: relative;
+  display: inline-block;
+  font-family: "Ropa Sans", sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 1);
+  padding: 0 18px;
+  
+  border-radius: 0;
+  border: none;
+  background-image: url("../img/layout/btn-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden; */
+  display: flex;
+  font-family: "Ropa Sans", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  align-items: center;
+  font-size: clamp(1rem, 1.8vw, 2.25rem);
+  font-weight: bold;
+  justify-content: center;
+  width: 600px;
+  height: 70px;
+  margin-right: 100px;
+  border: 2px solid black;
+  box-shadow: 5px 5px gray;
+  color: black;
+
+}
+
+/* .btn:before,
+.btn:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  z-index: 3;
+}
+.btn:hover:before,
+.btn:hover:after {
+  background-color: hsla(0, 0%, 100%, 1);
+}
+.btn:before {
+  bottom: 4px;
+  right: 4px;
+  border-right: 3px solid hsla(0, 0%, 100%, 1);
+}
+.btn:after {
+  top: 4px;
+  left: 4px;
+  border-left: 3px solid hsla(0, 0%, 100%, 1);
+}
+.btn .btn-text,
+.btn:focus .btn-text,
+.btn:active .btn-text {
+  color: hsla(0, 0%, 100%, 1);
+}
+.btn .btn-text,
+.btn:hover .btn-text {
+  position: relative;
+  display: block;
+  line-height: 1;
+  padding: 1.25rem 1.5rem;
+  border-top: 3px solid hsla(0, 0%, 100%, 1);
+  border-bottom: 3px solid hsla(0, 0%, 100%, 1);
+  z-index: 3;
+}
+.btn:hover .btn-text {
+  color: hsla(178, 71%, 27%, 1);
+  background-color: hsla(0, 0%, 100%, 1);
+}
+.btn .btn-text:before,
+.btn .btn-text:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: calc(100% - 13px);
+  z-index: 3;
+}
+.btn:hover .btn-text:before,
+.btn:hover .btn-text:after {
+  background-color: hsla(0, 0%, 100%, 1);
+}
+.btn .btn-text:before {
+  left: -18px;
+  bottom: -3px;
+  border-bottom: 3px solid hsla(0, 0%, 100%, 1);
+  border-left: 3px solid hsla(0, 0%, 100%, 1);
+}
+.btn .btn-text:after {
+  top: -3px;
+  right: -18px;
+  border-top: 3px solid hsla(0, 0%, 100%, 1);
+  border-right: 3px solid hsla(0, 0%, 100%, 1);
+} */
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <a class="btn" href="signin.html"><span class="btn-text">Vendor</span></a>
+        <a class="btn" href="search.html"><span class="btn-text">Vendee</span></a>
+    </div>
+
+</body>
+</html>

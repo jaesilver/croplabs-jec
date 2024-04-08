@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Vendor</title>
+    <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/dashboard.css">
+
+
+    
+</head>
+<body>
+
+
+   
+   <!-- Banner -->
+<!-- <a href="https://webpixels.io/components?ref=codepen" class="btn w-full btn-primary text-truncate rounded-0 py-2 border-0 position-relative" style="z-index: 1000;">
+    <strong>Crafted with Webpixels CSS:</strong> The design system for Bootstrap 5. Browse all components →
+</a> -->
+
+<!-- Dashboard -->
+<div class="d-flex flex-column flex-lg-row h-lg-full bg-gray-900">
+    <!-- Vertical Navbar -->
+    <nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 bg-gray-900 border-bottom border-bottom-lg-0 border-end-lg" id="navbarVertical">
+        <div class="container-fluid">
+            <!-- Toggler -->
+            <button class="navbar-toggler ms-n2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Brand -->
+            <a class="navbar-brand py-lg-2 mb-lg-5 px-lg-6 me-0" href="buttons.html">
+                <img src="images/logo.png" alt="...">
+            </a>
+            <!-- User menu (mobile) -->
+            <div class="navbar-user d-lg-none">
+                
+            </div>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="sidebarCollapse">
+                <!-- Navigation -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="#">
+                            <i class="bi bi-house"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <i class="bi bi-bar-chart"></i> Add a new item
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <i class="bi bi-chat"></i> Requests
+                            <span class="badge bg-success text-white rounded-pill d-inline-flex align-items-center ms-auto">6</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <i class="bi bi-bookmarks"></i> Update Contact Information
+                        </a>
+                    </li>
+                   
+                </ul>
+                <!-- Divider -->
+                <hr class="navbar-divider my-5 opacity-20">
+                
+                <!-- Push content down -->
+                <div class="mt-auto"></div>
+                <!-- User (md) -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <i class="bi bi-person-square"></i> Account
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <i class="bi bi-box-arrow-left"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content -->
+    <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+        <!-- Header -->
+
+
+
+
+
+
+
+
+
+
+<!-- Changed colour -->
+
+
+
+        <header class="bg-dark border-bottom pt-6">
+            <div class="container-fluid">
+                <div class="mb-npx">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                            <!-- Title -->
+                            <h1 class="h2 mb-0 ls-tight text-white">Dashboard</h1>
+                        </div>
+                        <!-- Actions -->
+                        <div class="col-sm-6 col-12 text-sm-end">
+                            <div class="mx-n1">
+                                <a href="#" class="btn d-inline-flex btn-sm btn-neutral border-base mx-1">
+                                    <span class=" pe-2">
+                                        <i class="bi bi-pencil"></i>
+                                    </span>
+                                    <span>Edit</span>
+                                </a>
+                                <a href="enter.html" class="btn d-inline-flex btn-sm btn-success mx-1">
+                                    <span class=" pe-2">
+                                        <i class="bi bi-plus"></i>
+                                    </span>
+                                    <span>Create new item</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav -->
+                    <ul class="nav nav-tabs mt-4 overflow-x border-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white">All items</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active-success font-regular text-success">Item requests</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="#" class="nav-link font-regular">File requests</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- Main -->
+        <main class="py-6 bg-surface-secondary">
+            <div class="container-fluid">
+                <div class="card shadow border-0 mb-7">
+                    <div class="card-header">
+                        <h5 class="mb-0">Requests</h5>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-nowrap">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">product requested</th>
+                                    <th scope="col">Date request has been recieved</th>
+                                    <th scope="col">Amount requested</th>
+                                    <th scope="col">Place</th>
+                                    <th scope="col">Contact No.</th>
+                                    
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        
+                                        <a class="text-heading font-semibold" href="#">
+                                            Ravi    
+                                        </a>
+                                    </td>
+                                    <td>
+                                        Banana Stem
+                                    </td>
+                                    <td>
+                                        Feb 15, 2024
+                                    </td>
+                                    <td>
+                                        <!-- <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-1.png" class="avatar avatar-xs rounded-circle me-2"> -->
+                                        <a class="text-heading font-semibold" href="#">
+                                            40 KG
+                                        </a>
+                                    </td>
+                                    <td>
+                                       Kannur
+                                    </td>
+                                    <td>
+                                        + 9061735329
+                                    </td>
+                                    <td class="text-end">
+                                        <a href="#" class="btn btn-sm btn-neutral">View</a>
+                                        <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <!-- <img alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2"> -->
+                                        <a class="text-heading font-semibold" href="#">
+                                            Rahul    
+                                        </a>
+                                    </td>
+                                    <td>
+                                        Coconut Shells
+                                    </td>
+                                    <td>
+                                        Feb 20, 2024
+                                    </td>
+                                    <td>
+                                        <!-- <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-1.png" class="avatar avatar-xs rounded-circle me-2"> -->
+                                        <a class="text-heading font-semibold" href="#">
+                                            20 KG
+                                        </a>
+                                    </td>
+                                    <td>
+                                       Palakkad
+                                    </td>
+                                    <td>
+                                       + 9539373496
+                                    </td>
+                                    <td class="text-end">
+                                        <a href="#" class="btn btn-sm btn-neutral">View</a>
+                                        <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <!-- <img alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2"> -->
+                                        <a class="text-heading font-semibold" href="#">
+                                            Rahman   
+                                        </a>
+                                    </td>
+                                    <td>
+                                        Bagasse
+                                    </td>
+                                    <td>
+                                        Feb 04, 2024
+                                    </td>
+                                    <td>
+                                        <!-- <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-1.png" class="avatar avatar-xs rounded-circle me-2"> -->
+                                        <a class="text-heading font-semibold" href="#">
+                                            70 KG
+                                        </a>
+                                    </td>
+                                    <td>
+                                       Ernakulam
+                                    </td>
+                                    <td>
++                                      8590736006
+                                    </td>
+                                    <td class="text-end">
+                                        <a href="#" class="btn btn-sm btn-neutral">View</a>
+                                        <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <!-- <img alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2"> -->
+                                        <a class="text-heading font-semibold" href="#">
+                                            Dakshayini   
+                                        </a>
+                                    </td>
+                                    <td>
+                                        Cow Dung
+                                    </td>
+                                    <td>
+                                        March 14, 2024
+                                    </td>
+                                    <td>
+                                        <!-- <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-1.png" class="avatar avatar-xs rounded-circle me-2"> -->
+                                        <a class="text-heading font-semibold" href="#">
+                                            10 KG
+                                        </a>
+                                    </td>
+                                    <td>
+                                       Irinjalakuda
+                                    </td>
+                                    <td>
++                                      9846361632
+                                    </td>
+                                    <td class="text-end">
+                                        <a href="#" class="btn btn-sm btn-neutral">View</a>
+                                        <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer border-0 py-5">
+                        <span class="text-muted text-sm">Showing 4 items out of 4 results found</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+    
+</body>
+</html>
+
+
+
+

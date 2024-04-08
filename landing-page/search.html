@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
+ * {
+	 -webkit-font-smoothing: antialiased;
+	 /* color: #75dab4 */
+}
+ :root {
+	 --border-radius: 10px;
+}
+ body, html {
+	 /* background: #e2e9f4; */
+     background: #1c1c1c;
+  display: grid;
+  width: 95vw; /* Set the maximum width to 90% of the viewport width */
+  margin: 20px;
+  grid-template: 1fr / 100%;
+  place-items: center;
+}
+ .Card {
+    margin-top: 40px;
+	 padding: 1px;
+	 border-radius: var(--border-radius);
+	 background: linear-gradient(-67deg, rgba(200, 216, 231, .7), rgba(255, 255, 255, .8));
+     /* background: linear-gradient(-67deg, rgba(176, 223, 188, .7), rgba(255, 255, 255, .8)); */
+	 overflow: hidden;
+	 box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 12px #c8d8e7; 
+     /* box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 12px #75dab4; */
+	 width: 1200px;
+}
+ .CardInner {
+	 padding: 16px 16px;
+	 background-color: #1c1c1c;
+	 border-radius: var(--border-radius);
+}
+ .container {
+	 display: flex;
+}
+ .Icon {
+	 min-width: 46px;
+	 min-height: 46px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 border-radius: var(--border-radius);
+	 margin-right: 12px;
+	 box-shadow: -2px -2px 6px rgba(255, 255, 255, .6), 2px 2px 12px #c8d8e7   ;
+}
+ .Icon svg {
+	 transform: translate(-1px, -1px);
+}
+ label {
+	 font-family: "Hind", sans-serif;
+	 display: block;
+	 color: #75dab4;
+	 margin-bottom: 12px;
+	 background: linear-gradient(45deg, rgba(107, 123, 143, 1), #3c4b66);
+     /* background: linear-gradient(-67deg, rgba(176, 223, 188, .7), rgba(255, 255, 255, .8)); */
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+}
+ .InputContainer {
+	 width: 100%;
+}
+ input {
+	 background-color: #1c1c1c;
+	 padding: 16px 32px;
+	 border: none;
+	 display: block;
+	 font-family: 'Orbitron', sans-serif;
+	 font-weight: 1000;
+	 color: #75dab4;
+	 -webkit-appearance: none;
+	 transition: all 240ms ease-out;
+	 width: 100%;
+     font-size: 25px;
+     
+}
+ input::placeholder {
+    
+	 color: #75dab4;
+     font-size: 25px;
+     font-weight: bold;
+}
+ input:focus {
+	 outline: none;
+	 color: #6d7f8f;
+	 background-color: #eff5fa;
+}
+ .InputContainer {
+	 --top-shadow: inset 1px 1px 3px #c5d4e3, inset 2px 2px 6px #c5d4e3;
+	 --bottom-shadow: inset -2px -2px 4px rgba(255, 255, 255, .7);
+	 position: relative;
+	 border-radius: var(--border-radius);
+	 overflow: hidden;
+}
+ .InputContainer:before, .InputContainer:after {
+	 left: 0;
+	 top: 0;
+	 display: block;
+	 content: "";
+	 pointer-events: none;
+	 width: 100%;
+	 height: 100%;
+	 position: absolute;
+}
+ .InputContainer:before {
+	 box-shadow: var(--bottom-shadow);
+}
+ .InputContainer:after {
+	 box-shadow: var(--top-shadow);
+}
+
+        h1 {
+          font-size: 32px;
+          margin: 0;
+          text-align: center;          
+        }
+
+
+/* .companies {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+} */
+
+.companies {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+            justify-content: center; /* Center the grid horizontally */
+            width: 60%;
+        }
+
+
+.company {
+  font-family: "Hind", sans-serif;
+  padding: 20px;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95));
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+}
+
+.company:hover {
+  transform: scale(1.05);
+}
+
+.company h2{
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #333; /* Adjust text color */
+}
+
+.company p {
+  font-size: 20px;
+  margin: 0;
+  color: #555; /* Adjust text color */
+}
+
+.know-more-container {
+  margin-top: 15px;
+}
+
+.know-more {
+  font-size: 16px;
+  color: #fff;
+  background: #acbdce; /* Adjust the background color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  
+}
+
+.know-more:hover {
+  background: #75dab4; /* Adjust the background color on hover */
+}
+
+
+/* .know-more-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+} */
+
+.hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 10px 0;
+}
+
+.know-more a {
+    font-family: "Hind", sans-serif;
+  color: black; /* Change the color to your preferred one */
+  /* background-color: #007bff; Change the background color to your preferred one */
+  padding: 0 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+.navbar {
+  background-color: #1c1c1c;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  padding: 10px;
+  width: 100%;
+  margin-top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.back-button svg {
+  width: 50px;
+  height: 50px;
+}
+
+.profile-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <button class="back-button" onclick="goBack()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="profile-button" onclick="goToProfile()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="22"></line>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="4.22" y1="17.78" x2="5.64" y2="16.36"></line>
+              <line x1="19.78" y1="17.78" x2="18.36" y2="16.36"></line>
+            </svg>
+          </button>
+    </div>
+
+
+      <div class="Card">
+        <div class="CardInner">
+          <form class="search-box">
+            <!-- <label for="search">Enter your Waste Product</label> -->
+            <div class="container">
+              <div class="Icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+              </div>
+              <div class="InputContainer">
+                <input type="text" id="search" name="search" placeholder="Enter your By-Product..."/>
+                <button type="submit"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+
+            <div class="container">
+                <div class="Icon">
+                    <!-- Icon for location -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-map-pin">
+                        <path
+                            d="M12 9c1.93 0 3.5-1.57 3.5-3.5S13.93 2 12 2s-3.5 1.57-3.5 3.5S10.07 9 12 9zM19 10c0-4.42-7-10-7-10s-7 5.58-7 10c0 3.78 2.9 8.15 7 13 4.12-4.85 7-9.22 7-13zM12 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="InputContainer">
+                    <input type="text" id="location" name="location" placeholder="Enter your location...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="companies-container" class="companies"></div>
+      
+
+
+
+
+
+
+
+
+
+
+      <script>
+        // Define an array of company data
+        const companyData = [
+          {"Farmer Name": "Ravi", "location": "Kannur", "Waste Materials": ["Jowar Stubble", "Mustard Stalks"]},
+          {"Farmer Name": "Priya", "location": "Kasargod", "Waste Materials": ["Paddy Straw", "Neem Cake"]},
+          {"Farmer Name": "Arjun", "location": "Trivandrum", "Waste Materials": ["Maize Stalks", "Goat Dung"]},
+          {"Farmer Name": "Anika", "location": "Chennai", "Waste Materials": ["Sugarcane Bagasse", "Coconut Husks"]},
+          {"Farmer Name": "Gautam", "location": "Hyderabad", "Waste Materials": ["Bajra Residue", "Cow Pat"]},
+          {"Farmer Name": "Ishita", "location": "Gandhinagar", "Waste Materials": ["Rice Bran", "Poultry Litter"]},
+          {"Farmer Name": "Varun", "location": "Kozhikode", "Waste Materials": ["Tulsi Leaves", "Fish Pond Sediment"]},
+          {"Farmer Name": "Kavya", "location": "Ernakulam", "Waste Materials": ["Sugarcane Bagasse", "Banana Stem"]},
+          {"Farmer Name": "Nikhil", "location": "Thrissur", "Waste Materials": ["Jowar Stubble", "Coconut Husks"]},
+          {"Farmer Name": "Tanvi", "location": "Angamaly", "Waste Materials": ["Soybean Residue", "Horse Droppings"]},
+          {"Farmer Name": "Meera", "location": "Shornur", "Waste Materials": ["Barley Straw", "Vegetable Peelings"]},
+          {"Farmer Name": "Raj", "location": "Palakkad", "Waste Materials": ["Oat Straw", "Pig Manure"]},
+          {"Farmer Name": "Saanvi", "location": "Alappuzha", "Waste Materials": ["Coffee Grounds", "Chicken Litter"]},
+          {"Farmer Name": "Ojas", "location": "Irinjalakuda", "Waste Materials": ["Bean Hulls", "Duck Manure"]},
+          {"Farmer Name": "Devika", "location": "Cheranalloor", "Waste Materials": ["Rye Straw", "Vermicompost"]},
+          {"Farmer Name": "Laksh", "location": "Pullur", "Waste Materials": ["Green Manure", "Prawn Shell Waste"]},
+          {"Farmer Name": "Freya", "location": "Thana", "Waste Materials": ["Banana Dry Stem", "Soybean Residue"]},
+          {"Farmer Name": "Aarav", "location": "Viyyur", "Waste Materials": ["Press Cake", "Distillers Grains"]},
+          {"Farmer Name": "Bhavya", "location": "Kolazhy", "Waste Materials": ["Brewery Spent Grain", "Pig Manure"]},
+          {"Farmer Name": "Jai", "location": "Chandigarh", "Waste Materials": ["Coconut Coir", "Rice Straw"]},
+          {"Farmer Name": "Eshaan", "location": "Punjab", "Waste Materials": ["Fish Sludge", "Seaweed Residues"]},
+          {"Farmer Name": "Priya", "location": "Ambalapuzha", "Waste Materials": ["Rice Straw", "Dairy Cow Manure"]},
+          {"Farmer Name": "Raj", "location": "Rajasthan", "Waste Materials": ["Corn Stalks", "Sheep Manure"]},
+          {"Farmer Name": "Tanvi", "location": "Jaipur", "Waste Materials": ["Barley Straw", "Neem Cake"]},
+          {"Farmer Name": "Kavya", "location": "Ahmedabad", "Waste Materials": ["Mustard Stalks", "Chicken Litter"]},
+          {"Farmer Name": "Varun", "location": "Kuttoor", "Waste Materials": ["Soybean Residue", "Paddy Straw"]},
+          {"Farmer Name": "Ishita", "location": "Kottekkad", "Waste Materials": ["Banana Stem", "Green Manure"]},
+          {"Farmer Name": "Gautam", "location": "Iritty", "Waste Materials": ["Sugarcane Bagasse", "Cow Pat"]},
+          {"Farmer Name": "Amit", "location": "Payyanur", "Waste Materials": ["Sunflower Stalks", "Cow Manure"]},
+          {"Farmer Name": "Smita", "location": "Irinjalakuda", "Waste Materials": ["Barley Residue", "Buffalo Dung"]},
+          {"Farmer Name": "Vikram", "location": "Kannur", "Waste Materials": ["Soybean Stubble", "Horse Manure"]},
+          {"Farmer Name": "Ishaan", "location": "Ernakulam", "Waste Materials": ["Rice Husks", "Sheep Manure"]},
+          {"Farmer Name": "Poonam", "location": "Alapuzha", "Waste Materials": ["Wheat Straw", "Pig Manure"]},
+          {"Farmer Name": "Aaradhya", "location": "Trivandrum", "Waste Materials": ["Cotton Stalks", "Chicken Litter"]},
+          {"Farmer Name": "Rahul", "location": "Thrissur", "Waste Materials": ["Maize Residue", "Duck Droppings"]},
+          {"Farmer Name": "Kirti", "location": "Kannur", "Waste Materials": ["Sugarcane Leaves", "Goat Manure"]},
+          {"Farmer Name": "Aditya", "location": "Kannur", "Waste Materials": ["Groundnut Shells", "Sheep Dung"]},
+          {"Farmer Name": "Juhi", "location": "Ernakulam", "Waste Materials": ["Sorghum Stalks", "Cow Dung"]},
+          {"Farmer Name": "Rohan", "location": "Trivandrum", "Waste Materials": ["Rye Residue", "Horse Droppings"]},
+          {"Farmer Name": "Kiran", "location": "Kozhikkode", "Waste Materials": ["Mustard Stalks", "Rabbit Droppings"]},
+          {"Farmer Name": "Preeti", "location": "Kannur", "Waste Materials": ["Millet Stubble", "Turkey Droppings"]},
+          {"Farmer Name": "Rohan", "location": "Pullur", "Waste Materials": ["Oat Residue", "Quail Droppings"]},
+          {"Farmer Name": "Aradhya", "location": "Irinjalakuda", "Waste Materials": ["Alfalfa Stalks", "Pigeon Droppings"]},
+          {"Farmer Name": "Kunal", "location": "Thrissur", "Waste Materials": ["Chickpea Residue", "Guinea Fowl Droppings"]},
+          {"Farmer Name": "Anjali", "location": "Irinjalakuda", "Waste Materials": ["Flax Stalks", "Emu Droppings"]},
+          {"Farmer Name": "Ravi", "location": "Cheranalloor", "Waste Materials": ["Sesame Residue", "Duck Manure"]},
+          {"Farmer Name": "Pallavi", "location": "Payyanur", "Waste Materials": ["Buckwheat Stalks", "Goose Droppings"]},
+          {"Farmer Name": "Vivek", "location": "Iritty", "Waste Materials": ["Canola Stubble", "Pheasant Droppings"]},
+          {"Farmer Name": "Sarita", "location": "Alapuzha", "Waste Materials": ["Safflower Stalks", "Swan Droppings"]},
+          {"Farmer Name": "Rajat", "location": "Chandigarh", "Waste Materials": ["Quinoa Residue", "Peacock Droppings", "Banana Stem"]},
+          {"Farmer Name": "Tanisha", "location": "Kozhikkode", "Waste Materials": ["Mung Bean Stalks", "Ostrich Droppings"]},
+          {"Farmer Name": "Prateek", "location": "Ernakulam", "Waste Materials": ["Faba Bean Residue", "Alpaca Manure"]},
+          {"Farmer Name": "Ishita", "location": "Thrissur", "Waste Materials": ["Chia Stalks", "Llama Manure"]},
+          {"Farmer Name": "Sanjay", "location": "Koyilandi", "Waste Materials": ["Bamboo Leaves", "Yak Dung"]},
+          {"Farmer Name": "Vidya", "location": "Kannur", "Waste Materials": ["Buckwheat Residue", "Camel Manure"]},
+          {"Farmer Name": "Anil", "location": "Kannur", "Waste Materials": ["Hazelnut Shells", "Buffalo Dung"]},
+          {"Farmer Name": "Sneha", "location": "Kannur", "Waste Materials": ["Cumin Stalks", "Banana Stem"]}
+  ];
+
+            // Add more companies as needed
+      
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const companiesContainer = document.getElementById('companies-container');
+            const searchForm = document.querySelector('.search-box');
+            const searchInput = document.getElementById('search');
+            const locationInput = document.getElementById('location');
+
+            // Initial display of all companies
+            displayCompanies(companyData);
+
+            // Add event listener for search form submission
+            searchForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const searchTerm = searchInput.value.toLowerCase();
+                const locationTerm = locationInput.value.toLowerCase();
+
+                // Filter companies based on the search term
+                const filteredCompanies = companyData.filter(company =>
+                    company['Waste Materials'].some(material =>
+                        material.toLowerCase().includes(searchTerm)
+                    ) &&
+                    company['location'].toLowerCase().includes(locationTerm)
+                );
+
+                // Display the filtered companies
+                displayCompanies(filteredCompanies);
+            });
+
+            // Function to display companies
+            function displayCompanies(companies) {
+                companiesContainer.innerHTML = '';
+
+                companies.forEach(company => {
+                    const companyElement = document.createElement('div');
+                    companyElement.classList.add('company');
+                    companyElement.dataset.wasteType = company['Waste Materials'][0].toLowerCase();
+
+                    const h2 = document.createElement('h2');
+                    h2.textContent = company['Farmer Name'];
+
+                    const h3 = document.createElement('h3');
+                    h3.textContent = company['location'];
+
+                    const p = document.createElement('p');
+                    p.textContent = `${company['Waste Materials'].join(', ')} as their waste products.`;
+
+                    const knowMoreContainer = document.createElement('div');
+                    knowMoreContainer.classList.add('know-more-container');
+
+                    const hr = document.createElement('hr');
+
+                    const knowMore = document.createElement('p');
+                    knowMore.classList.add('know-more');
+                    knowMore.innerHTML = `<a href="\match-desc.html" target="_blank">Match with ${company['Farmer Name']}</a>`;
+
+                    companyElement.appendChild(h2);
+                    companyElement.appendChild(h3);
+                    companyElement.appendChild(p);
+                    knowMoreContainer.appendChild(hr);
+                    knowMoreContainer.appendChild(knowMore);
+                    companyElement.appendChild(knowMoreContainer);
+
+                    companiesContainer.appendChild(companyElement);
+                });
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
+
+
+
+
